@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -29,10 +30,22 @@ if __name__ == '__main__':
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
-
+    
     # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    ax.plot(x, y, color='r', marker='x', label="f(x)=x^2")
+    
+    ax.set_facecolor('whitesmoke')
+    ax.set_title("f(x)=x^2")
+    ax.set_ylabel("y")
+    ax.set_xlabel("x")
+    ax.legend()
+    ax.grid(ls='dashdot')
+
+    plt.show()
 
     print("terminamos")
